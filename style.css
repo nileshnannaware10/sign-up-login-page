@@ -1,0 +1,144 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Light and Dark Themes */
+body.light-theme {
+    background: linear-gradient(135deg, #9450ad, #8d68e2);
+    color: #333;
+}
+
+body.dark-theme {
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    color: #fff;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .container {
+    background: #444;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: inherit;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-theme .form-group input {
+    background: #555;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+.form-group input:focus {
+    border-color: #6e8efb;
+    box-shadow: 0 0 5px rgba(110, 142, 251, 0.5);
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #6e8efb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #5a76d8;
+    transform: translateY(-2px);
+}
+
+body.dark-theme .btn {
+    background: #3a3a3a;
+    color: #6e8efb;
+}
+
+/* Links Styling */
+.links a {
+    color: #6e8efb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #5a76d8;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#theme-toggle-button {
+    padding: 10px 20px;
+    background: #6e8efb;
+    color: #94d97e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+body.dark-theme #theme-toggle-button {
+    background: #444;
+    color: #6e8efb;
+}
+
+#theme-toggle-button:hover {
+    background: #5a76d8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    #theme-toggle-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
